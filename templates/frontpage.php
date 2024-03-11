@@ -26,6 +26,22 @@
   </div>
 </div>
 
+<div class="container my-5">
+  <form action="" class="p-5 d-flex bg-body-tertiary rounded-3 justify-content-between">
+    <label for="" class="fs-4 fw-bold">Categories</label>
+    <div class="col-8">
+      <select class="form-select" aria-label="Default select example">
+        <option value="0">Select Categories</option>
+        <?php foreach ($categories as $category): ?>
+          <option value="<?php $category->id ?>">
+            <?php echo $category->name ?>
+          </option>
+        <?php endforeach; ?>
+      </select>
+    </div>
+  </form>
+</div>
+
 <div class="b-example-divider"></div>
 
 <?php foreach ($jobs as $job): ?>
