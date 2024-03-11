@@ -28,4 +28,18 @@ class Job
 
         return $results;
     }
+
+    public function getJobByCategory($category)
+    {
+        $this->db->query("SELECT jobs.*, categories.name AS cname 
+                            FROM jobs
+                            INNER JOIN categories
+                            ON jobs.category_id = categories.id
+                            WHERE jobs.category_id = $category
+                            ORDER BY post_date DESC
+                            ");
+        $results = $this->db->resultSet();
+
+        return $results;
+    }
 }

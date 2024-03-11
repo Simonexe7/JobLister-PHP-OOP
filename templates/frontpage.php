@@ -27,18 +27,19 @@
 </div>
 
 <div class="container my-5">
-  <form action="" class="p-5 d-flex bg-body-tertiary rounded-3 justify-content-between">
-    <label for="" class="fs-4 fw-bold">Categories</label>
+  <form action="index.php" method="GET" class="p-5 d-flex bg-body-tertiary rounded-3 justify-content-between">
+    <label class="fs-4 fw-bold">Categories</label>
     <div class="col-8">
-      <select class="form-select" aria-label="Default select example">
+      <select class="form-select" aria-label="Default select example" name="category">
         <option value="0">Select Categories</option>
         <?php foreach ($categories as $category): ?>
-          <option value="<?php $category->id ?>">
+          <option value="<?php echo $category->id ?>">
             <?php echo $category->name ?>
           </option>
         <?php endforeach; ?>
       </select>
     </div>
+    <input type="submit" class="btn btn-primary" value="FIND">
   </form>
 </div>
 
@@ -55,9 +56,11 @@
           <?php echo $job->description; ?>
         </p>
       </div>
-      <button class="align-items-center btn btn-primary btn-lg px-4" type="button">
-        View
-      </button>
+      <div>
+        <button class="align-items-center btn btn-primary btn-lg px-4" type="button">
+          View
+        </button>
+      </div>
     </div>
   </div>
 <?php endforeach; ?>
