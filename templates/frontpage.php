@@ -28,19 +28,23 @@
 
 <div class="b-example-divider"></div>
 
-<div class="container my-5">
-  <div class="p-5 text-start d-flex flex-row bg-body-tertiary rounded-3">
-    <h1 class="text-body-emphasis">Basic jumbotron</h1>
-    <p class="lead mt-4">
-      This is a simple Bootstrap jumbotron that sits within a <code>.container</code>, recreated with built-in
-      utility
-      classes.
-    </p>
-    <button class="align-items-center btn btn-primary btn-lg px-4" type="button">
-      View
-    </button>
+<?php foreach ($jobs as $job): ?>
+  <div class="container my-5">
+    <div class="p-5 text-start d-flex flex-row bg-body-tertiary rounded-3 justify-content-between">
+      <div class="d-flex flex-column">
+        <h1 class="text-body-emphasis">
+          <?php echo $job->job_title; ?>
+        </h1>
+        <p class="lead mt-4">
+          <?php echo $job->description; ?>
+        </p>
+      </div>
+      <button class="align-items-center btn btn-primary btn-lg px-4" type="button">
+        View
+      </button>
+    </div>
   </div>
-</div>
+<?php endforeach; ?>
 
 <div class="b-example-divider"></div>
 

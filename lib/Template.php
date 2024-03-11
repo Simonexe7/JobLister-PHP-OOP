@@ -10,17 +10,17 @@
         $this->template = $template;
     }
 
-    public function __get($key) : string
+    public function __get($key)
     {
         return $this->vars[$key];
     }
 
-    public function __set($key, $value) : void
+    public function __set($key, $value): void
     {
         $this->vars[$key] = $value;
     }
 
-    public function __toString() : string
+    public function __toString(): string
     {
         extract($this->vars);
         chdir(dirname($this->template));
