@@ -24,9 +24,6 @@
       </a>
     </div>
   </div>
-</div>
-
-<div class="container my-5">
   <form action="index.php" method="GET" class="p-5 d-flex bg-body-tertiary rounded-3 justify-content-between">
     <label class="fs-4 fw-bold">Categories</label>
     <div class="col-8">
