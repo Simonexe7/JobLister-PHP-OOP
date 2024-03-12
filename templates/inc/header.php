@@ -142,3 +142,4 @@
       </div>
     </div>
   </header>
+  <?php displayMessage() ?>
