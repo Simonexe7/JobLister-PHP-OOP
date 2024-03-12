@@ -38,6 +38,11 @@
     </div>
     <input type="submit" class="btn btn-primary" value="FIND">
   </form>
+  <div class="p-5 text-start d-flex flex-row bg-body-tertiary rounded-3 justify-content-between">
+    <h3>
+      <?php echo $title ?>
+    </h3>
+  </div>
 </div>
 
 <div class="b-example-divider"></div>
@@ -54,9 +59,9 @@
         </p>
       </div>
       <div>
-        <button class="align-items-center btn btn-primary btn-lg px-4" type="button">
+        <a href="job.php?id=<?php echo $job->id; ?>" class="align-items-center btn btn-primary btn-lg px-4" type="button">
           View
-        </button>
+        </a>
       </div>
     </div>
   </div>
