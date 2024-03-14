@@ -24,5 +24,8 @@
     <a href="index.php" class="btn btn-primary px-4 mt-5" type="button">
         Go Back
     </a>
+    <a href="edit.php?id=<?php echo $jobs->id ?>" class="btn btn-secondary px-4 mt-5" type="button">
+        Edit
+    </a>
 </div>
 <?php include 'inc/footer.php'; ?>

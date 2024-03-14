@@ -14,6 +14,16 @@ if ($category) {
     $template->jobs = $job->getAllJobs();
     $template->title = "Latest Jobs";
 }
-$template->categories = $job->getCategories();
+
+if (isset($_POST['del_id'])){
+    $del_id = $_POST['del_id'];
+    if($job->deleteJob($del_id)){
+        redirect('index.php', 'Job Deleted', 'success');
+    } else {
+        redirect('index.php', 'Job Not Deleted', 'error');
+    }
+}
+
+    $template->categories = $job->getCategories();
 
 echo $template;

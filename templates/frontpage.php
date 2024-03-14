@@ -55,6 +55,12 @@
         <a href="job.php?id=<?php echo $job->id; ?>" class="align-items-center btn btn-primary btn-lg px-4" type="button">
           View
         </a>
+        <form method="POST" class="mt-3">
+          <input type="hidden" name="del_id" value="<?php echo $job->id ?>">
+          <button class="align-items-center btn btn-danger btn-lg px-4" type="submit">
+            Delete
+          </button>
+        </form>
       </div>
     </div>
   </div>
